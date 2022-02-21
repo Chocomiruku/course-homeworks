@@ -58,9 +58,9 @@ fun runSecondTask() {
     println("\nFirst element: " + userNames.first() + ", last element: " + userNames.last())
 
     // Exercises 7-12 : Extension function, anonymous object, inline, sealed class
-    doAction(Registration)
-    doAction(Login(user))
-    doAction(Logout)
+    doAction(Action.Registration)
+    doAction(Action.Login(user))
+    doAction(Action.Logout)
 }
 
 fun main() {
