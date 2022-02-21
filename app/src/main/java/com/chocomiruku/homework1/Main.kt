@@ -11,7 +11,7 @@ fun buy(purchase: Publication) {
 
 fun runFirstTask() {
     // Exercise 1: Publication's info
-    val bookFirst = Book(25.50, 1000)
+    val bookFirst: Book? = null
     val bookSecond = Book(50.70, 7500)
     val magazine = Magazine(11.50, 10000)
 
@@ -58,9 +58,9 @@ fun runSecondTask() {
     println("\nFirst element: " + userNames.first() + ", last element: " + userNames.last())
 
     // Exercises 7-12 : Extension function, anonymous object, inline, sealed class
-    doAction(Registration)
-    doAction(Login(user))
-    doAction(Logout)
+    doAction(Action.Registration)
+    doAction(Action.Login(user))
+    doAction(Action.Logout)
 }
 
 fun main() {
