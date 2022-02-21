@@ -1,19 +1,19 @@
 package com.chocomiruku.homework1.task2
 
-sealed class Action
-
-object Registration : Action()
-class Login(val user: User) : Action()
-object Logout : Action()
+sealed class Action {
+    object Registration : Action()
+    class Login(val user: User) : Action()
+    object Logout : Action()
+}
 
 fun doAction(action: Action) {
     when (action) {
-        is Registration -> println("\nRegistration has started.")
-        is Login -> {
+        is Action.Registration -> println("\nRegistration has started.")
+        is Action.Login -> {
             println("Auth has started.")
             auth(action.user, ::updateCache)
         }
-        is Logout -> print("Logout has started.")
+        is Action.Logout -> print("Logout has started.")
     }
 }
 
