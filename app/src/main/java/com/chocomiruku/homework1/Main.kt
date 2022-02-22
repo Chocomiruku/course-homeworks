@@ -46,8 +46,8 @@ fun runSecondTask() {
     // Exercise 4: Scope function apply
     val users = mutableListOf(user)
     users.apply {
-        this.add(User(id = 2, name = "Ivan", age = 25, type = Type.FULL))
-        this.add(User(id = 3, name = "Maria", age = 30, type = Type.DEMO))
+        add(User(id = 2, name = "Ivan", age = 25, type = Type.FULL))
+        add(User(id = 3, name = "Maria", age = 30, type = Type.DEMO))
     }
 
     // Exercise 5: Filtering collections
