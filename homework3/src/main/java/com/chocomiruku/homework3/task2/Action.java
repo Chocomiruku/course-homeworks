@@ -1,6 +1,9 @@
 package com.chocomiruku.homework3.task2;
 
 public abstract class Action {
+    private Action() {
+    }
+
     public static final class Registration extends Action {
     }
 
