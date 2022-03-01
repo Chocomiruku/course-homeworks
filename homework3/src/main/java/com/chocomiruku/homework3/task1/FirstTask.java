@@ -2,10 +2,12 @@ package com.chocomiruku.homework3.task1;
 
 import static com.chocomiruku.homework3.Util.formatPrice;
 
+import androidx.annotation.NonNull;
+
 import com.chocomiruku.homework3.task2.Operation;
 
 public class FirstTask {
-    public void buy(Publication purchase) {
+    public void buy(@NonNull Publication purchase) {
         if (purchase == null) throw new NullPointerException();
         System.out.println("\nThe purchase is complete. The purchase amount was " + formatPrice(purchase.getPrice()));
     }
